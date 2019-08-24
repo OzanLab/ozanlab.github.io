@@ -1,0 +1,315 @@
+/****
+===========================
+* Theme Name: One Page Personal
+* Description: CSS Theme for personal page with smooth design
+* Author: Slamet Fauzan
+* Author URL: https://ozanlab.com/
+* License: Unlicensed
+* Special Thanks: Sololearn App, Codepen.io
+===========================
+****/
+
+* {
+     margin:0;
+     padding:0;
+     box-sizing:border-box;
+}
+html {
+     scroll-behavior:smooth;
+}
+body {
+    color:#728694;
+    font-size:16px;
+    font-family:Arial,sans-serif,serif;
+    scroll-behavior:smooth;
+}
+a {
+    text-decoration:none;
+    color:#3498DB;
+    
+}
+header {
+    background-image:-webkit-linear-gradient(bottom right,#3498DB,#34b4db,#34c2db);
+    color:#fcfdfe;
+    font-family:"Lato";
+}
+
+/*Navigation menu slider*/
+.menu-button {
+    padding-top:.75rem;
+    padding-left:.5rem;
+    z-index:100;
+    position:fixed;
+    top:0;
+    left:0;
+    cursor:ponter;
+    transition:all .6s ease-in-out;
+}
+.menu-button div {
+    width:33px;
+    height:4px;
+    background-color:#fcfdfe;
+    display:block;
+    margin:5px;
+    transition:all .6s ease-in-out;
+    border-radius:4px;
+    opacity:.8;
+    color:#728694;
+    
+    
+}
+.menu-button.active {
+    left:270px;
+    padding:1rem 0 0;
+    transition:all .6s ease-in-out;
+    
+}
+.menu-button.active .one {
+    transform:translateY(9px) rotate(-135deg);
+    transition:all .6s ease-in-out;
+    background-color:#3498DB;
+}
+.menu-button.active .two {
+    opacity:0;
+    transition:.4s ease;
+}
+.menu-button.active .three {
+    transform:translateY(-9px) rotate(-45deg);
+    transition:all .6s ease-in-out;
+    background-color:#3498DB;
+}
+.menu-slider {
+    width:323px;;
+    height:100vh;
+    left:-323px;
+    position:fixed;
+    z-index:10;
+    top:0;
+    color:#728694;
+    transition:all .6s ease-in-out;
+    
+}
+.menu-slider .credit {
+    left:-323px;
+    position:fixed;
+    z-index:10;
+    bottom:1rem;
+    color:#728694;
+    transition:all .6s ease-in-out;
+}
+.menu-slider nav ul li {
+    list-style-type:none;
+}
+.menu-slider.show {
+    width:323px;
+    left:0;
+    background-color:#fff;
+    transition:all .6s ease-in-out;
+    
+}
+.menu-slider.show .credit {
+    position:fixed;
+    left:1rem;
+    bottom:1rem;   
+    transition:all .7s ease;
+    
+}
+.overlay {
+    position:fixed;
+    width:100%;
+    height:100vh;
+    top:0;
+    left:0;
+    background-color:rgba(0,0,0,0);
+    transition:all .4s ease-in-out;
+}
+.overlay.on {
+    background-color:rgba(0,0,0,.4);
+    transition:all .6s ease-in-out;
+}
+.main-header {
+    text-align:center;
+    padding:5rem;
+}
+.menu-profile {
+    padding:1rem;
+    margin-bottom:1rem;
+    border-bottom:1px solid #728694;
+    transition:linear .5s ease;
+}
+.menu-title {
+    padding-top:1rem;
+    font-weight:bold;
+    padding-left:1rem;
+    line-height:40px;
+    color:#728694;
+}
+.menu-item {
+    height:40px;
+    margin-left:2rem;
+    width:100%;
+    line-height:40px;
+    
+    font-weight:500;
+}
+.menu-item:hover {
+    background-color:#728694;
+    margin:0;
+    padding-left:2rem;
+    color:#fff;
+    height:100%;
+    width:100%;
+    
+}
+.img-profile {
+    width:40px;
+    height:40;
+    border-radius:50%;
+    
+    
+}
+.menu-right {
+    position:absolute;
+    margin-left:.5rem;
+    
+}
+.navbar {
+    position:fixed;
+    top:0;
+    padding:.5rem 0;
+    z-index:2;
+    width:100%;
+    }
+.navbar.scrolled { 
+    background: inherit  !important;
+    transition: background-color .2s linear;
+    height:3.5rem;
+    }
+
+.img-logo {
+    width:70px;
+    height:70px;
+    border-radius:50%;
+}
+.container {
+    margin-top:3rem;
+    padding:0 15px;
+}
+.grid {
+    display:grid;
+    grid-template-columns:auto;
+    position:relative;
+}
+.grid-footer {
+    display:grid;
+    justify-content:center;
+    grid-template-columns:auto;
+    position:relative;
+    transition: all .4s ease-in-out;
+}
+.card {
+    box-sizing:pading-box;
+    margin-bottom:1rem;
+}
+.card-body {
+    padding:0 0.25rem;
+}
+.card-title {
+    display:inline-block;
+    border-bottom:2px solid #3498DB;
+    padding:0.5rem 0;
+    margin-bottom:1rem;
+}
+.card-content {
+    background-color:rgba(235, 245, 252,0.25);
+    padding:1rem;
+    margin-bottom:0.25rem;
+}
+svg {
+    width:50px;
+    height:auto;
+    margin-right:.5rem;
+}
+footer {
+    
+    padding:1rem;
+    opacity:0.7;
+    
+}
+footer i {
+    margin-right:0.5rem;
+    color:#728694;
+}
+.center {
+    padding-top:0.75rem;
+    text-align:center;
+}
+h3 {
+    margin-bottom:0.25rem;
+}
+/*Loader by Madhav*/
+.loader
+{   display:block;
+    margin-top:60%;  margin-left:38%;
+    
+}
+#cont
+{   display:block ; color:white;
+    position:fixed ; z-index:1000;
+    background-image:-webkit-linear-gradient(bottom right,#3498DB,#34b4db,#34c2db);
+    height:100%; width:100%;
+    margin:0; top:0;
+    
+}
+.loader span 
+{   display:inline-block;
+    height:35px;  width:10px;
+    background-color:#fff;
+    margin:1px;
+    transform:scaleY(1);
+    animation:load .9s ease-in-out infinite;
+}
+
+.loader span:nth-child(2)
+{
+    animation-delay:.09s;
+}
+.loader span:nth-child(3)
+{
+    animation-delay:.18s;
+}
+.loader span:nth-child(4)
+{
+    animation-delay:.27s;
+}
+.loader span:nth-child(5)
+{
+    animation-delay:.36s;
+}
+
+
+@keyframes load
+{
+    0%
+    {
+        transform:scale(1);
+    }
+    25%
+    {
+        transform:scale(1,2.5);
+    }
+    50%
+    {
+        transform:scaleY(1);
+    }
+}
+
+
+
+@media only screen and ( min-width:500px )
+{
+  .loader
+{  
+    margin-top:20%;  margin-left:41%;
+}  
+}
