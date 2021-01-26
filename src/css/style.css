@@ -259,7 +259,7 @@ h3 {
     margin-top:60%;  margin-left:38%;
     
 }
-#cont
+#loading
 {   display:block ; color:white;
     position:fixed ; z-index:1000;
     background-image:-webkit-linear-gradient(bottom right,#3498DB,#34b4db,#34c2db);
